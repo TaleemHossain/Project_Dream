@@ -57,6 +57,7 @@ public class Zombie : MonoBehaviour
         if(Time.time - lastAttackTime > attackCooldown)
         {
             Vector3 dir = player.transform.position - transform.position;
+            // Debug.Log("Distance to player: " + dir.magnitude);
             if(dir.magnitude < attackRange)
             {
                 Health health = player.GetComponent<Health>();

@@ -1,6 +1,5 @@
-using NUnit.Framework;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class Health : MonoBehaviour
 {
     public float MaxHealth = 100f;
@@ -8,6 +7,7 @@ public class Health : MonoBehaviour
     public bool IsDead;
     Animator animator;
     Rigidbody2D rb;
+    public Image healthBar;
     void Start()
     {
         rb = transform.GetComponent<Rigidbody2D>();
@@ -25,6 +25,8 @@ public class Health : MonoBehaviour
             else
                 Die();
         }
+        if(healthBar != null)
+            healthBar.fillAmount = currentHealth / MaxHealth;
     }
     public void Die()
     {
