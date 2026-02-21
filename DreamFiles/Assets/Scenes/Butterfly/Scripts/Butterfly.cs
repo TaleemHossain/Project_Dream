@@ -33,6 +33,11 @@ public class Butterfly : MonoBehaviour
     }
     void OnCollisionEnter2D(Collision2D collision)
     {
+        if(collision.gameObject.CompareTag("Flower"))
+        {
+            ManagerFly manager = FindAnyObjectByType<ManagerFly>();
+            // Game Finish
+        }
         FindAnyObjectByType<ManagerFly>().ResetGame();
         if (idx + 2 >= player.Length)
         {

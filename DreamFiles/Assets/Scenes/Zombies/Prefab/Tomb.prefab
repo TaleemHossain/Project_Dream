@@ -242,7 +242,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 0
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_TargetDisplay: 0
 --- !u!114 &6590026505895575882
 MonoBehaviour:
@@ -364,7 +364,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 1773231339, guid: ce1f7006005ff784dbdb255221623c41, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -434,7 +434,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0e2ed5b4fac7db4c9a7aa2e6757a412, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  zombiePrefab: {fileID: 2178991716537876854, guid: 269fd9527d938d543b8f536bb1996e41, type: 3}
+  zombiePrefab: {fileID: 2178991716537876854, guid: 269fd9527d938d543b8f536bb1996e41,
+    type: 3}
   spawnPoint: {fileID: 730960400594786523}
 --- !u!114 &2236338093146177773
 MonoBehaviour:

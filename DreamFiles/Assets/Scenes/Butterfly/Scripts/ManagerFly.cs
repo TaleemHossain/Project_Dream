@@ -4,9 +4,11 @@ public class ManagerFly : MonoBehaviour
 {
     public Butterfly butterfly;
     public Spawner spawner;
+    public GameObject text;
     void Start()
     {
         Time.timeScale = 0f;
+        text.SetActive(true);
     }
     void Update()
     {
@@ -14,6 +16,7 @@ public class ManagerFly : MonoBehaviour
         {
             if(Input.GetKeyDown(KeyCode.Space))
             {
+                text.SetActive(false);
                 Time.timeScale = 1f;
             }
         }
