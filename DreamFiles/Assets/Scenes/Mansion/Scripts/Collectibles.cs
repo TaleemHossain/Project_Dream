@@ -1,14 +1,21 @@
 using UnityEngine;
+using UnityEngine.UI;
 namespace StarterAssets
 {
     public class Collectibles : MonoBehaviour
     {
         public int keyCode;
         bool PlayerInsideTrigger = false;
+        GameObject tip;
         private StarterAssetsInputs input;
+        void Awake()
+        {
+            tip = GameObject.FindGameObjectWithTag("Tip");
+        }
         void Start()
         {
             input = GameObject.FindGameObjectWithTag("Player").GetComponent<StarterAssetsInputs>();
+            tip.SetActive(false);
         }
         void Update()
         {
@@ -18,6 +25,7 @@ namespace StarterAssets
                 {
                     GameObject player = GameObject.FindGameObjectWithTag("Player");
                     player.GetComponent<PlayerKeyHandler>().CollectKey(keyCode);
+                    tip.SetActive(false);
                     Destroy(gameObject);
                 }
             }
@@ -28,6 +36,7 @@ namespace StarterAssets
             {
                 PlayerInsideTrigger = true;
             }
+            tip.SetActive(PlayerInsideTrigger);
         }
         void OnTriggerExit(Collider other)
         {
@@ -35,6 +44,7 @@ namespace StarterAssets
             {
                 PlayerInsideTrigger = false;
             }
+            tip.SetActive(PlayerInsideTrigger);
         }
     }
 }

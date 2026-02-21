@@ -84,6 +84,12 @@ namespace StarterAssets
 		{
 			Cursor.lockState = newState ? CursorLockMode.Locked : CursorLockMode.None;
 		}
-	}
-	
+        void LateUpdate()
+        {
+            if(interact)
+			{
+				interact = false;
+			}
+        }
+    }
 }
